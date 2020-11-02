@@ -17,7 +17,7 @@ module.exports = {
             use: {
                 loader: 'url-loader',
                 options: {
-                    name: '[name].[hash].[ext]',
+                    name: '[name].[contenthash].[ext]',
                     outputPath: 'imgs/',
                     limit: 2048
                 }
@@ -65,7 +65,7 @@ module.exports = {
         new CleanWebpackPlugin(),
     ],
     output: {
-        filename: '[name].[hash].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
 }
