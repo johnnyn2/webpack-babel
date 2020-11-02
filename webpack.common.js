@@ -4,9 +4,8 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: './src/index.js',
-        test: './src/components/test.js',
-        test1: './src/components/test1.js'
+        index: './src/js/pages/index.js',
+        posts: './src/js/pages/posts.js'
     },
     module: {
         rules: [{
@@ -52,16 +51,16 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.ftl',
+            template: './src/pages/index.html',
             inject: true,
             chunks: ['index'],
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
-            template: './src/index1.ftl',
+            template: './src/pages/posts.html',
             inject: true,
-            chunks: ['index'],
-            filename: 'index1.html'
+            chunks: ['posts'],
+            filename: 'posts.html'
         }),
         new CleanWebpackPlugin()
     ],

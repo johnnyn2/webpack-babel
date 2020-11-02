@@ -1,7 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
-    page 2
-</body>
-</html>
