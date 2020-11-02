@@ -11,22 +11,20 @@ module.exports = {
         rules: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            loader: 'babel-loader',
+            loader: 'babel-loader'
         }, {
-            test: /\.jpg|png|gif$/,
+            test: /\.jpg|png|gif|svg$/,
             use: {
                 loader: 'url-loader',
                 options: {
-                    name: '[name]_[hash].[ext]',
+                    name: '[name].[hash].[ext]',
                     outputPath: 'imgs/',
                     limit: 2048
                 }
             }
         }, {
-            test: /\.eot|ttf|svg|woff$/,
-            use: {
-                loader: 'file-loader'
-            }
+            test: /\.(woff|woff2|eot|ttf|otf)$/,
+            use: ['file-loader']
         }, {
             test: /\.scss$/,
             use: [
@@ -51,21 +49,23 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            title: 'index',
             template: './src/pages/index.html',
             inject: true,
             chunks: ['index'],
             filename: 'index.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'posts',
             template: './src/pages/posts.html',
             inject: true,
             chunks: ['posts'],
             filename: 'posts.html'
         }),
-        new CleanWebpackPlugin()
+        new CleanWebpackPlugin(),
     ],
     output: {
-        filename: '[name].js',
+        filename: '[name].[hash].js',
         path: path.resolve(__dirname, 'dist')
-    }
+    },
 }

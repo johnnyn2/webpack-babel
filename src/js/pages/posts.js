@@ -1,4 +1,5 @@
 import css from '../../css/posts.css';
+import Heading from '../../assets/images/heading.jpg';
 import $ from 'jquery';
 
 async function getPosts() {
@@ -15,6 +16,8 @@ const PostItem = (post) => {
     `<div class="row"><div>userId: </div><div>${post.userId}</div></div>` +
     `</div>`;
 }
+
+$('.flex-container').append(`<img src="${Heading}" width="500" height="300"></img>`);
 
 getPosts().then(posts => {
     console.log(posts);
