@@ -1,1 +1,1 @@
-setTimeout(() => { window.location.replace("posts.html"); }, 3000);
+setTimeout(() => { window.location.replace('posts.html') }, 3000)
