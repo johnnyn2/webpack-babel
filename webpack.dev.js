@@ -1,19 +1,21 @@
-const webpack = require('webpack');
-const { merge } = require('webpack-merge');
-const commonConfig = require('./webpack.common.js');
+const webpack = require('webpack')
+const { merge } = require('webpack-merge')
+const commonConfig = require('./webpack.common.js')
+const path = require('path')
 
 const devConfig = {
-    mode: 'development',
-    devtool: false,
-    devServer: {
-        contentBase: './dist',
-        open: true,
-        hot: true,
-        port: 9000
-    },
-    plugins: [
-        new webpack.HotModuleReplacementPlugin()
-    ]
+  mode: 'development',
+  devtool: false,
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    watchContentBase: true,
+    open: true,
+    hot: true,
+    port: 9000
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]
 }
 
-module.exports = merge(commonConfig, devConfig);
+module.exports = merge(commonConfig, devConfig)
