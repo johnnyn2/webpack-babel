@@ -9,12 +9,12 @@ async function getPosts () {
 }
 
 const PostItem = (post) => {
-  return '<div class="post">' +
-    `<div class="row"><div>id: </div><div>${post.id}</div></div>` +
-    `<div class="row"><div>title: </div><div>${post.title}</div></div>` +
-    `<div class="row"><div>body: </div><div>${post.body}</div></div>` +
-    `<div class="row"><div>userId: </div><div>${post.userId}</div></div>` +
-    '</div>'
+  return `<div class="post">
+    <div class="row"><div>id: </div><div>${post.id}</div></div>
+    <div class="row"><div>title: </div><div>${post.title}</div></div>
+    <div class="row"><div>body: </div><div>${post.body}</div></div>
+    <div class="row"><div>userId: </div><div>${post.userId}</div></div>
+    </div>`
 }
 
 $(() => {
