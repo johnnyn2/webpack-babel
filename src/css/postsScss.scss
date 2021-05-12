@@ -1,3 +1,6 @@
+@import '../css/common.scss';
+
+// Nesting
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -6,9 +9,11 @@
         margin-bottom: 20px;
     }
 
-    & div {
+    div {
         display: flex;
     }
+
+    background-color: $primary;
 }
 
 .post {
@@ -23,3 +28,20 @@
 .row {
     display: flex;
 }
+
+/* Mixin to dynamically generate the same set of css properties with different params */
+$transition-speed: 1s / 50px;
+
+@mixin move($left-start, $left-stop) {
+    position: absolute;
+    left: $left-start;
+    transition: left ($left-stop - $left-start) * $transition-speed;
+    &:hover {
+        left: $left-stop;
+    }
+}
+
+.slider {
+    @include move(10px, 120px);
+}
+
