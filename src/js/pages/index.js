@@ -8,5 +8,10 @@ $(() => {
     const b = Number($('#b').val())
     const r = a + b
     $('#result').html(prefix + r)
+    const point = {
+      x: 4,
+      y: 5
+    }
+    console.log(point.z.j)
   })
 })

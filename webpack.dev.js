@@ -5,7 +5,7 @@ const path = require('path')
 
 const devConfig = {
   mode: 'development',
-  devtool: false,
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     watchContentBase: true,
