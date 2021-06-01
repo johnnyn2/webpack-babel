@@ -1,5 +1,5 @@
 import '../../css/posts.css'
-import '../../css/postsScss.scss'
+import '../../css/posts.scss'
 import Heading from '../../assets/images/heading.jpg'
 import $ from 'jquery'
 

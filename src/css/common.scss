@@ -1,11 +1,13 @@
 $primary: #81899b;
 $accent: #302e24;
 $warn: #dfa612;
+$white: #fff;
 
 :root {
     --primary: #{$primary};
     --accent: #{$accent};
     --warn: #{$warn};
+    --white: #{$white};
 
     --consumed-by-js: $primary;
 }
