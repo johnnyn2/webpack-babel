@@ -15,11 +15,11 @@ module.exports = {
     }, {
       test: /\.jpg|png|gif|svg$/,
       use: {
-        loader: 'url-loader',
+        loader: 'file-loader',
         options: {
-          name: '[name].[ext]',
+          name: '[name].[contenthash].[ext]',
           outputPath: 'assets/images/',
-          limit: 2048
+          esModule: false
         }
       }
     }, {
@@ -66,6 +66,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: ''
   }
 }
