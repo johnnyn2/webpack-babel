@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import constants from '../../util/constants'
+import '../../css/index.scss'
 
 $(() => {
   const { prefix } = constants
