@@ -42,7 +42,7 @@ const prodConfig = {
       }
     ]
   },
-  devtool: 'nosources-source-map',
+  devtool: false,
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].min.css'
