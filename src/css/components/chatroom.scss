@@ -1,0 +1,23 @@
+@import '../common.scss';
+
+@mixin vertical-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatroom {
+    @include vertical-flex-container;
+    width: 700px;
+    border-radius: 10px;
+
+    .header {
+        font-size: 20px;
+        font-weight: 800;
+        background-color: $softBlue;
+        padding: 20px;
+    }
+
+    .body {
+        @include vertical-flex-container
+    }
+}

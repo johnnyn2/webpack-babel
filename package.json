@@ -49,6 +49,7 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
     "html-loader": "^2.1.2",
     "jquery": "^3.5.1",
     "node-sass": "^5.0.0",

@@ -2,9 +2,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Header } from './chatroom/Header.jsx'
+import '../css/components/chatroom.scss'
 
 ReactDOM.render(
-    <div>
+    <div className="chatroom">
         <Header title="Chatroom Header" />
     </div>,
     document.getElementById('react-chatroom')
