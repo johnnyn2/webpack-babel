@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import constants from '../../util/constants'
 import '../../css/index.scss'
+import '../../components/chatroom'
 
 $(() => {
   const { prefix } = constants
