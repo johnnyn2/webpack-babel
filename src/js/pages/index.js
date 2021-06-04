@@ -36,7 +36,7 @@ function Index () {
         ...prevState,
         [name]: {
           ...prevValueObj,
-          value,
+          value: hasError ? value : Number(value),
           hasError
         }
       }
